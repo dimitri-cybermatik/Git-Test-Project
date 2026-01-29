@@ -9,3 +9,4 @@ La commande suivante sert à récupérer les modifications depuis le dépôt dis
 La commande suivante sert à créer une nouvelle branche: git branch <nom_de_la_branche>
 La commande suivante sert à basculer vers une branche spécifique: git checkout <nom_de_la_branche>
 La commande suivante sert à fusionner une branche spécifique dans la branche courante: git merge <nom_de_la_branche>
+La commande suivante sert à supprimer directement un fichier, à la fois du répertoire local, et le place en stagging git
