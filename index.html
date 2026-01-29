@@ -8,32 +8,40 @@
   <link rel="icon" href="assets/stock.svg">
 </head>
 <body>
-  <header class="main-header">
-    <div class="header-left">
-      <img src="assets/stock.svg" alt="Logo" class="header-logo">
-      <span class="header-title">Gestion de Stock – Mockup</span>
-    </div>
-    <div class="header-right">
-      <span class="header-user">Bienvenue&nbsp;!</span>
-    </div>
-  </header>
-  <div id="app">
-    <nav class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <span class="app-title">Navigation</span>
+  <div class="layout-root">
+    <header class="main-header">
+      <div class="header-left">
+        <img src="assets/stock.svg" alt="Logo" class="header-logo">
+        <span class="header-title">Gestion de Stock – Mockup</span>
       </div>
-      <ul class="sidebar-menu">
-        <li class="menu-item active" data-screen="dashboard"><span class="icon">🏠</span> Accueil</li>
-        <li class="menu-item" data-screen="parts"><span class="icon">📦</span> Pièces</li>
-        <li class="menu-item" data-screen="stores"><span class="icon">🏬</span> Magasins</li>
-        <li class="menu-item" data-screen="users"><span class="icon">👤</span> Utilisateurs</li>
-        <li class="menu-item" data-screen="demo"><span class="icon">🔄</span> Mode Démo</li>
-      </ul>
-    </nav>
-    <main class="main-content" id="main-content">
-      <!-- Le contenu dynamique sera injecté ici par app.js -->
-    </main>
-    <div id="modal-root"></div>
+      <div class="header-right">
+        <span class="header-user">Bienvenue&nbsp;!</span>
+      </div>
+    </header>
+    <div id="app" class="layout-app">
+      <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <span class="app-title">Navigation</span>
+          <button id="sidebar-toggle" class="sidebar-toggle" title="Réduire la barre" aria-label="Réduire la barre">
+            <span class="icon">⏪</span>
+          </button>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="menu-item active" data-screen="dashboard"><span class="icon">🏠</span> Accueil</li>
+          <li class="menu-item" data-screen="parts"><span class="icon">📦</span> Pièces</li>
+          <li class="menu-item" data-screen="stores"><span class="icon">🏬</span> Magasins</li>
+          <li class="menu-item" data-screen="users"><span class="icon">👤</span> Utilisateurs</li>
+          <li class="menu-item" data-screen="demo"><span class="icon">🔄</span> Mode Démo</li>
+        </ul>
+      </nav>
+      <main class="main-content" id="main-content">
+        <!-- Le contenu dynamique sera injecté ici par app.js -->
+      </main>
+      <div id="modal-root"></div>
+    </div>
+    <footer id="footer" class="footer">
+      <span>&copy; 2026 Gestion de Stock – Mockup Fluent UI. Tous droits réservés.</span>
+    </footer>
   </div>
   <script src="app.js"></script>
 </body>
