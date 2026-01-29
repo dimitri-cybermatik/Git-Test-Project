@@ -20,7 +20,7 @@ Ce schéma relationnel est adapté à l’application de gestion de stock simul�
 - name (varchar)
 - ref (varchar, unique)
 - stock (int)
-- storeId (FK → Stores.id)
+- storeId (FK → Stores.id)  -- Le magasin rattaché à la pièce peut être modifié depuis l'interface
 
 ### StockMovements
 - id (PK, int, auto)
