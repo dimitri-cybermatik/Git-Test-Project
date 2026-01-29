@@ -1,0 +1,11 @@
+La commande suivante sert à initialiser git pour un projet: git init
+La commande suivante sert à cloner un dépôt distant: git clone <url_du_dépôt>
+La commande suivante sert à vérifier l'état des fichiers dans le dépôt local: git status
+La commande suivante sert à ajouter des fichiers spécifiques à l'index (staging area): git add <nom_du_fichier>
+La commande suivante sert à ajouter tous les fichiers modifiés à l'index: git add .
+La commande suivante sert à valider les modifications ajoutées à l'index avec un message de commit: git commit -m "message_de_commit"
+La commande suivante sert à envoyer les commits locaux vers le dépôt distant: git push origin <nom_de_la_branche>
+La commande suivante sert à récupérer les modifications depuis le dépôt distant vers le dépôt local: git pull origin <nom_de_la_branche>
+La commande suivante sert à créer une nouvelle branche: git branch <nom_de_la_branche>
+La commande suivante sert à basculer vers une branche spécifique: git checkout <nom_de_la_branche>
+La commande suivante sert à fusionner une branche spécifique dans la branche courante: git merge <nom_de_la_branche>
