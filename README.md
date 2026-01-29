@@ -3,6 +3,11 @@
 
 Ce projet est un mockup visuel d’application de gestion de stock de pièces détachées, inspiré de Fluent UI, en HTML/CSS/JS pur. Il est autonome : ouvrez simplement `index.html` dans votre navigateur.
 
+## Dernières améliorations (2026-01)
+- Correction du débordement de la bulle "Bienvenue !" dans le header : la bulle reste bien dans la barre supérieure, même avec un texte long ou sur petit écran.
+- Footer modernisé : nouveau style dégradé, alignement flex, meilleure visibilité et design plus élégant.
+- Nettoyage du CSS : suppression des doublons, meilleure organisation, responsive amélioré.
+
 ## Fonctionnalités simulées
 - Thème clair, design adaptatif (responsive)
 - Navigation par menu latéral (Accueil, Pièces, Magasins, Utilisateurs, Mode Démo)
@@ -20,6 +25,7 @@ Ce projet est un mockup visuel d’application de gestion de stock de pièces d�
 ## Structure du projet
 - `index.html` : point d’entrée, structure principale, header, sidebar, contenu dynamique
 - `style.css` : styles Fluent UI, responsive, animations, modales
+	- (2026-01) : header et footer refaits, bulle Bienvenue protégée contre le débordement, footer modernisé
 - `app.js` : logique navigation/interactions, gestion des écrans, données fictives, modales
 - `assets/` : icônes, images
 - `database_schema.md` : proposition de schéma de base de données
@@ -39,11 +45,7 @@ Pour servir le projet en local (recommandé pour tester les imports JS/CSS ou si
 3. Lancez la commande :
 
 	```bash
-	python serveur.py
-	```
-	ou, si vous utilisez l’environnement virtuel fourni :
-	```bash
-	.venv\Scripts\python.exe serveur.py
+	python -m http.server 8000
 	```
 
 4. Ouvrez [http://localhost:8000](http://localhost:8000) dans votre navigateur
