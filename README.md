@@ -24,10 +24,31 @@ Ce projet est un mockup visuel d’application de gestion de stock de pièces d�
 - `assets/` : icônes, images
 - `database_schema.md` : proposition de schéma de base de données
 
+
 ## Utilisation
 1. Clonez ou téléchargez ce dépôt
-2. Ouvrez `index.html` dans votre navigateur (ou servez le dossier via un serveur local)
+2. Ouvrez `index.html` dans votre navigateur **ou servez le dossier via un serveur local** (recommandé pour simuler un vrai environnement web)
 3. Naviguez et testez les interactions (aucune donnée réelle n’est enregistrée)
+
+### Démarrer un serveur local Python
+
+Pour servir le projet en local (recommandé pour tester les imports JS/CSS ou simuler un vrai site web) :
+
+1. Ouvrez un terminal dans le dossier du projet
+2. Si vous avez un environnement virtuel, activez-le (optionnel)
+3. Lancez la commande :
+
+	```bash
+	python serveur.py
+	```
+	ou, si vous utilisez l’environnement virtuel fourni :
+	```bash
+	.venv\Scripts\python.exe serveur.py
+	```
+
+4. Ouvrez [http://localhost:8000](http://localhost:8000) dans votre navigateur
+
+Pour arrêter le serveur, faites `Ctrl+C` dans le terminal.
 
 ## Limites
 - Ce mockup ne se connecte à aucune base de données réelle
