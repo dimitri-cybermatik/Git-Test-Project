@@ -1,0 +1,5 @@
+// Ignore a specific personal file
+MyPersoFile.txt
+
+// Ignore all text files in the "Le Gros Doss" directory and its subdirectories
+Le Gros Doss/**/*txt
