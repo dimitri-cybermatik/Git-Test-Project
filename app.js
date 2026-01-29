@@ -58,11 +58,52 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM Content Loaded");
   const main = document.getElementById("main-content");
   console.log("main-content element:", main);
-  
+  // Sidebar toggle (desktop only)
+  const sidebar = document.getElementById('sidebar');
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('retracted');
+    });
+  }
+  // Sidebar rétractée par défaut sur mobile
+  function handleSidebarMobile() {
+    if (window.innerWidth <= 800) {
+      sidebar.classList.add('retracted');
+    } else {
+      sidebar.classList.remove('retracted');
+    }
+  }
+  handleSidebarMobile();
+  window.addEventListener('resize', handleSidebarMobile);
+
   document.querySelectorAll('.menu-item').forEach(item => {
     item.addEventListener('click', () => setScreen(item.dataset.screen));
   });
-  
+
+  // Footer dynamique
+  function updateFooter() {
+    const footer = document.getElementById('footer');
+    if (!footer) return;
+    const nbPieces = data.parts.length;
+    const nbAlertes = data.parts.filter(p => p.stock < 10).length;
+    const version = 'v1.0.0';
+    const msg = 'Merci d\'utiliser ce mockup !';
+    footer.innerHTML = `
+      <span style="margin-right:18px;">📦 <b>${nbPieces}</b> pièces</span>
+      <span style="margin-right:18px;">⚠️ <b>${nbAlertes}</b> alerte(s) stock</span>
+      <span style="margin-right:18px;">🔖 ${version}</span>
+      <span>${msg}</span>
+    `;
+  }
+  updateFooter();
+  // Mettre à jour le footer à chaque changement d'écran ou de données
+  const origRender = render;
+  render = function() {
+    origRender.apply(this, arguments);
+    updateFooter();
+  };
+
   console.log("Starting initial render...");
   render();
   console.log("Initial render complete");
