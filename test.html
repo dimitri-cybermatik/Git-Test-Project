@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("DOM loaded");
+      const main = document.getElementById("main-content");
+      console.log("main element:", main);
+      if (main) {
+        main.innerHTML = "<h1>Test OK - Le JavaScript fonctionne</h1>";
+      } else {
+        console.error("main-content not found!");
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="main-content">Chargement...</div>
+</body>
+</html>
