@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion de Stock – Mockup Fluent UI</title>
+  <title>✨ Gestion de Stock – Amazing Mockup</title>
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/stock.svg">
 </head>
 <body>
   <div class="layout-root">
     <header class="main-header">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Ouvrir le menu">
+        <span class="hamburger-icon"></span>
+      </button>
       <div class="header-left">
         <img src="assets/stock.svg" alt="Logo" class="header-logo">
-        <span class="header-title">Gestion de Stock – Mockup</span>
+        <span class="header-title">✨ Gestion de Stock</span>
       </div>
       <div class="header-right">
-        <span class="header-user">Bienvenue&nbsp;!</span>
+        <span class="header-user" id="header-user">Bienvenue, Alice&nbsp;!</span>
       </div>
     </header>
+    <!-- Overlay pour fermer le menu mobile -->
+    <div id="mobile-overlay" class="mobile-overlay"></div>
     <div id="app" class="layout-app">
       <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -40,7 +49,7 @@
       <div id="modal-root"></div>
     </div>
     <footer id="footer" class="footer">
-      <span>&copy; 2026 Gestion de Stock – Mockup Fluent UI. Tous droits réservés.</span>
+      <span>✨ 2026 Gestion de Stock – Amazing Mockup</span>
     </footer>
   </div>
   <script src="app.js"></script>
